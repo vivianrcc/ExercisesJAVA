@@ -10,18 +10,30 @@ import java.util.Scanner;
 
 public class Exercise01 {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
+        int anoUsuario, mesUsuario, diaUsuario, totaldias;
+
         //ENTRADA DE DADOS
+        System.out.println("Digite sua idade (Anos): ");
+        anoUsuario = scanner.nextInt();
 
-        int idade;
+        System.out.println("Digite quantos meses : ");
+        mesUsuario = scanner.nextInt();
 
-        System.out.println("Digite sua idade: Exemplo X anos, X meses e X dias \n");
-        idade = scanner.nextInt();
+        System.out.println("Digite os dias : ");
+        diaUsuario = scanner.nextInt();
 
+        //DEFININDO VALOR DAS VARIAVEIS PARA SOMA
+        int calculandoAno = 365 * anoUsuario;
+        int calculandoMes = 30 * mesUsuario;
 
+        //SOMANDO VALORES PARA A SAIDA DE DADOS
+        totaldias = calculandoAno + calculandoMes + diaUsuario;
+
+        System.out.println("O total de dias é:" + totaldias);
     }
 
 }
